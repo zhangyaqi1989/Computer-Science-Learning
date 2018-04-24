@@ -1,0 +1,57 @@
+1. let and const
+   do not use 'var';
+   use 'const' as much as you can
+   use 'let' only when you really need to
+
+2. primitive types
+   number, boolean, string
+
+3. variable scope
+   {} block
+
+4. compound values: array and object
+   4.1 Array
+   const x = [1, 2, 3, 4, 5] x[0]
+   const prevents x reassigning to others, x's content could change
+   out of bound index gives you undefined
+   x.push(), x.pop()
+   const y = x; // y points to the array pointed by x
+
+   for (const e of x) // google's style
+   {
+     console.log('Element: ' + e);
+   }
+
+   4.2 object
+   Associations between keys and values
+   const ages = {"Mike" : 25, "Tom" : 30};
+   const ages = {Mike : 25, Tom : 30};
+   // modify
+   ages['Mike'] = 35;
+   ages.Julia = 40;
+
+   // traverse: use function Object.keys()
+   for (const e of Object.keys(ages))
+     console.log(e, "->", ages[e]);
+
+5. function
+   function defines new scope
+   functions are just objects
+   passing parameters is like assignment with "="
+
+   function could be decleared in two ways: regular (use function keyword) and anonimous
+   use the "function" keyword for top-level functions that are
+   not inside of any other braces
+   use the arrow keyword "=>" to define functions inside of {braces}
+
+6. pass functions as arguments to function calls
+   forEach() function
+   xs.forEach(func)
+   the map() function also takes a function as an
+   argument. It returns a new array with each element
+   processed by that function. xs.map(func)
+   ys is a func version of xs. What vs How
+
+7. Asynchronous programming
+
+
