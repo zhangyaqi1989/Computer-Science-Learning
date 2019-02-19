@@ -53,5 +53,3 @@
    ys is a func version of xs. What vs How
 
 7. Asynchronous programming
-
-
